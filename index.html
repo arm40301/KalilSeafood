@@ -74,6 +74,16 @@
     .price {
       float: right;
     }
+    .drinks-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.drinks-column {
+  flex: 1;
+  min-width: 300px;
+}
+
   </style>
 </head>
 <body>
@@ -113,19 +123,24 @@
       <li><span class="item">Fish and Chips <span class="price">$13.99</span></span><span class="desc">Battered fish fillet, crispy fries, tartar sauce</span><span class="french">Poisson pané, frites croustillantes, sauce tartare</span></li>
       <li><span class="item">Grilled Halibut <span class="price">$23.99</span></span><span class="desc">Halibut steak, grilled asparagus, dill cream</span><span class="french">Steak de flétan, asperges grillées, crème à l'aneth</span></li>
     </ul>
-    <h2>Drinks</h2>
-    <ul>
-      <li><span class="item">Cola <span class="price">$2.99</span></span><span class="desc">Classic cola drink</span><span class="french">Boisson gazeuse classique</span></li>
-      <li><span class="item">Lemon Soda <span class="price">$2.99</span></span><span class="desc">Sparkling lemon-flavored soda</span><span class="french">Soda pétillant au citron</span></li>
-      <li><span class="item">Orange Fizz <span class="price">$3.49</span></span><span class="desc">Carbonated orange drink</span><span class="french">Boisson gazeuse à l'orange</span></li>
-      <li><span class="item">Ginger Ale <span class="price">$3.25</span></span><span class="desc">Mildly spicy ginger-flavored soda</span><span class="french">Soda au gingembre légèrement épicé</span></li>
-      <li><span class="item">Sparkling Lime <span class="price">$3.49</span></span><span class="desc">Lime soda with bubbles</span><span class="french">Soda pétillant au citron vert</span></li>
-      <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><span class="desc">Fresh mango, cold water, natural sweetener</span><span class="french">Mangue fraîche, eau froide, édulcorant naturel</span></li>
-      <li><span class="item">Strawberry Smoothie <span class="price">$4.75</span></span><span class="desc">Strawberries, yogurt, honey, ice</span><span class="french">Fraises, yaourt, miel, glace</span></li>
-      <li><span class="item">Watermelon Juice <span class="price">$4.50</span></span><span class="desc">Chilled watermelon, mint, lime</span><span class="french">Pastèque fraîche, menthe, citron vert</span></li>
-      <li><span class="item">Pineapple Crush <span class="price">$4.25</span></span><span class="desc">Pineapple, coconut water, crushed ice</span><span class="french">Ananas, eau de coco, glace pilée</span></li>
-      <li><span class="item">Fresh Orange Juice <span class="price">$4.00</span></span><span class="desc">Fresh squeezed oranges, pulp</span><span class="french">Oranges fraîchement pressées, pulpe</span></li>
-    </ul>
+<h2>Drinks</h2>
+<div class="drinks-grid">
+  <ul class="drinks-column">
+    <li><span class="item">Cola <span class="price">$2.99</span></span><span class="desc">Classic cola drink</span><span class="french">Boisson gazeuse classique</span></li>
+    <li><span class="item">Lemon Soda <span class="price">$2.99</span></span><span class="desc">Sparkling lemon-flavored soda</span><span class="french">Soda pétillant au citron</span></li>
+    <li><span class="item">Orange Fizz <span class="price">$3.49</span></span><span class="desc">Carbonated orange drink</span><span class="french">Boisson gazeuse à l'orange</span></li>
+    <li><span class="item">Ginger Ale <span class="price">$3.25</span></span><span class="desc">Mildly spicy ginger-flavored soda</span><span class="french">Soda au gingembre légèrement épicé</span></li>
+    <li><span class="item">Sparkling Lime <span class="price">$3.49</span></span><span class="desc">Lime soda with bubbles</span><span class="french">Soda pétillant au citron vert</span></li>
+  </ul>
+  <ul class="drinks-column">
+    <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><span class="desc">Fresh mango, cold water, natural sweetener</span><span class="french">Mangue fraîche, eau froide, édulcorant naturel</span></li>
+    <li><span class="item">Strawberry Smoothie <span class="price">$4.75</span></span><span class="desc">Strawberries, yogurt, honey, ice</span><span class="french">Fraises, yaourt, miel, glace</span></li>
+    <li><span class="item">Watermelon Juice <span class="price">$4.50</span></span><span class="desc">Chilled watermelon, mint, lime</span><span class="french">Pastèque fraîche, menthe, citron vert</span></li>
+    <li><span class="item">Pineapple Crush <span class="price">$4.25</span></span><span class="desc">Pineapple, coconut water, crushed ice</span><span class="french">Ananas, eau de coco, glace pilée</span></li>
+    <li><span class="item">Fresh Orange Juice <span class="price">$4.00</span></span><span class="desc">Fresh squeezed oranges, pulp</span><span class="french">Oranges fraîchement pressées, pulpe</span></li>
+  </ul>
+</div>
+
   </main>
   <script>
     function toggleDarkMode() {
