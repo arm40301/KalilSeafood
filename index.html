@@ -31,6 +31,10 @@
       background: var(--accent);
       color: white;
     }
+    #title {
+      text-align: center;
+      flex-grow: 1;
+    }
     .switches {
       display: flex;
       gap: 2rem;
@@ -65,7 +69,6 @@
     }
     .slider:before {
       position: absolute;
-      content: attr(data-label);
       height: 18px;
       width: 18px;
       left: 3px;
@@ -157,7 +160,7 @@
     </div>
   </header>
   <main class="menu-section">
-    <!-- Menu content remains the same -->
+    <p style="text-align:center;">Full menu content goes here...</p>
   </main>
   <script>
     function toggleDarkMode() {
@@ -168,9 +171,9 @@
       const isEnglish = document.getElementById('title').textContent === 'KHALIL SEAFOOD';
 
       document.getElementById('title').textContent = isEnglish ? 'KHALIL FRUITS DE MER' : 'KHALIL SEAFOOD';
-      document.getElementById('starters-title').textContent = isEnglish ? 'Entrées' : 'Starters';
-      document.getElementById('mains-title').textContent = isEnglish ? 'Plats principaux' : 'Mains';
-      document.getElementById('drinks-title').textContent = isEnglish ? 'Boissons' : 'Drinks';
+      document.getElementById('starters-title')?.textContent = isEnglish ? 'Entrées' : 'Starters';
+      document.getElementById('mains-title')?.textContent = isEnglish ? 'Plats principaux' : 'Mains';
+      document.getElementById('drinks-title')?.textContent = isEnglish ? 'Boissons' : 'Drinks';
 
       const translations = {
         'Shrimp Cocktail': 'Cocktail de crevettes',
@@ -207,7 +210,7 @@
       };
 
       document.querySelectorAll('.item').forEach(el => {
-        const text = el.childNodes[0].nodeValue.trim();
+        const text = el.childNodes[0].nodeValue?.trim();
         const translated = isEnglish ? translations[text] : Object.keys(translations).find(key => translations[key] === text);
         if (translated) el.childNodes[0].nodeValue = isEnglish ? translated + ' ' : text + ' ';
       });
