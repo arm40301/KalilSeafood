@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHALIL SEAFOOD Menu</title>
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --text-light: #333;
+      --bg-dark: #1a1a1a;
+      --text-dark: #eee;
+      --accent: #0077b6;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--accent);
+      color: white;
+    }
+    .switches {
+      display: flex;
+      gap: 1rem;
+    }
+    button {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .menu-section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">KHALIL SEAFOOD</h1>
+    <div class="switches">
+      <button onclick="toggleDarkMode()">🌙/☀️</button>
+      <button onclick="toggleLanguage()">EN/FR</button>
+    </div>
+  </header>
+  <main class="menu-section">
+    <section>
+      <h2 id="starters-title">Starters</h2>
+      <ul id="starters">
+        <li><span class="item">Shrimp Cocktail</span><span class="price">$9.99</span></li>
+        <li><span class="item">Fried Calamari</span><span class="price">$10.99</span></li>
+        <li><span class="item">Clam Chowder</span><span class="price">$8.49</span></li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="mains-title">Mains</h2>
+      <ul id="mains">
+        <li><span class="item">Grilled Salmon</span><span class="price">$18.99</span></li>
+        <li><span class="item">Lobster Roll</span><span class="price">$16.99</span></li>
+        <li><span class="item">Seafood Paella</span><span class="price">$21.99</span></li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="drinks-title">Drinks</h2>
+      <ul id="drinks">
+        <li><span class="item">Sparkling Water</span><span class="price">$2.99</span></li>
+        <li><span class="item">White Wine</span><span class="price">$7.50</span></li>
+        <li><span class="item">Lemon Iced Tea</span><span class="price">$3.49</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function toggleLanguage() {
+      const current = document.getElementById('title').textContent;
+      const isEnglish = current === 'KHALIL SEAFOOD';
+
+      document.getElementById('title').textContent = isEnglish ? 'KHALIL FRUITS DE MER' : 'KHALIL SEAFOOD';
+      document.getElementById('starters-title').textContent = isEnglish ? 'Entrées' : 'Starters';
+      document.getElementById('mains-title').textContent = isEnglish ? 'Plats principaux' : 'Mains';
+      document.getElementById('drinks-title').textContent = isEnglish ? 'Boissons' : 'Drinks';
+
+      const starters = document.getElementById('starters').children;
+      starters[0].children[0].textContent = isEnglish ? 'Cocktail de crevettes' : 'Shrimp Cocktail';
+      starters[1].children[0].textContent = isEnglish ? 'Calmars frits' : 'Fried Calamari';
+      starters[2].children[0].textContent = isEnglish ? 'Soupe de palourdes' : 'Clam Chowder';
+
+      const mains = document.getElementById('mains').children;
+      mains[0].children[0].textContent = isEnglish ? 'Saumon grillé' : 'Grilled Salmon';
+      mains[1].children[0].textContent = isEnglish ? 'Sandwich au homard' : 'Lobster Roll';
+      mains[2].children[0].textContent = isEnglish ? 'Paëlla aux fruits de mer' : 'Seafood Paella';
+
+      const drinks = document.getElementById('drinks').children;
+      drinks[0].children[0].textContent = isEnglish ? 'Eau pétillante' : 'Sparkling Water';
+      drinks[1].children[0].textContent = isEnglish ? 'Vin blanc' : 'White Wine';
+      drinks[2].children[0].textContent = isEnglish ? 'Thé glacé au citron' : 'Lemon Iced Tea';
+    }
+  </script>
+</body>
+</html>
