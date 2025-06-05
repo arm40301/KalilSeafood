@@ -34,12 +34,13 @@
     }
     .menu-section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       background: white;
       border-radius: 16px;
       border: 1px solid #ccc;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
     body.dark .menu-section {
       background: #222;
@@ -49,6 +50,8 @@
     h2 {
       border-bottom: 2px solid var(--accent);
       padding-bottom: 0.3rem;
+      position: relative;
+      z-index: 2;
     }
     ul {
       list-style: none;
@@ -75,15 +78,63 @@
       float: right;
     }
     .drinks-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.drinks-column {
-  flex: 1;
-  min-width: 300px;
-}
-
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .drinks-column {
+      flex: 1;
+      min-width: 300px;
+    }
+    .semicircle {
+      width: 120px;
+      height: 60px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 0 0 120px 120px;
+      overflow: hidden;
+      position: absolute;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, transparent);
+    }
+    .semi-right {
+      right: -60px;
+    }
+    .semi-left {
+      left: -60px;
+      transform: scaleX(-1);
+    }
+    .starter-semicircle {
+      top: 80px;
+      background-image: url('https://www.foodandwine.com/thmb/eJbvl3xF29aslGsseo5ekZrmL0s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Dirty-Martini-Shrimp-Cocktail-FT-Recipe0624-17d9fd13705a402da5d673053929ba6a.jpg');
+    }
+    .main-left-semicircle {
+      top: 1000px;
+      background-image: url('https://images.squarespace-cdn.com/content/v1/5ea5f3913b0ccf06d0ec2563/1594402435034-7900Y55B6VZ71CTKK2JH/Lobster+Roll+%286%29.jpg?format=2500w');
+    }
+    .main-right-semicircle {
+      top: 1250px;
+      background-image: url('https://media.timeout.com/images/105940676/750/562/image.jpg');
+    }
+    .label {
+      text-align: center;
+      font-size: 0.75rem;
+      margin-top: 4px;
+      color: #666;
+    }
+    .image-container {
+      position: absolute;
+      width: 120px;
+      z-index: 0;
+    }
+    .image-container.left {
+      left: -60px;
+    }
+    .image-container.right {
+      right: -60px;
+    }
   </style>
 </head>
 <body>
@@ -91,61 +142,47 @@
     <h1 id="title">KHALIL SEAFOOD</h1>
   </header>
   <main class="menu-section">
+    <div class="image-container right" style="top: 80px">
+      <div class="semicircle starter-semicircle"></div>
+      <div class="label">Shrimp Cocktail</div>
+    </div>
+
     <h2>Starters</h2>
     <ul>
       <li><span class="item">Shrimp Cocktail <span class="price">$9.99</span></span><span class="desc">Chilled shrimp, lemon wedges, tangy cocktail sauce</span><span class="french">Crevettes fraîches, quartiers de citron, sauce cocktail relevée</span></li>
       <li><span class="item">Fried Calamari <span class="price">$10.99</span></span><span class="desc">Lightly breaded squid rings, garlic aioli</span><span class="french">Rondelles de calmars panées, aïoli à l'ail</span></li>
       <li><span class="item">Clam Chowder <span class="price">$8.49</span></span><span class="desc">Creamy soup with clams, potatoes, and celery</span><span class="french">Soupe crémeuse aux palourdes, pommes de terre et céleri</span></li>
-      <li><span class="item">Garlic Butter Mussels <span class="price">$9.49</span></span><span class="desc">Steamed mussels, garlic, parsley, white wine butter sauce</span><span class="french">Moules vapeur, ail, persil, sauce au beurre et vin blanc</span></li>
-      <li><span class="item">Seafood Spring Rolls <span class="price">$7.99</span></span><span class="desc">Shrimp, crab, vegetables wrapped in rice paper</span><span class="french">Crevettes, crabe et légumes dans une feuille de riz</span></li>
-      <li><span class="item">Mini Crab Cakes <span class="price">$11.49</span></span><span class="desc">Lump crab meat, herbs, remoulade sauce</span><span class="french">Chair de crabe, herbes fraîches, sauce rémoulade</span></li>
-      <li><span class="item">Spicy Tuna Tartare <span class="price">$12.99</span></span><span class="desc">Fresh tuna, avocado, sesame oil, chili flakes</span><span class="french">Thon frais, avocat, huile de sésame, piment</span></li>
-      <li><span class="item">Grilled Scallops <span class="price">$13.49</span></span><span class="desc">Seared scallops, lemon zest, arugula</span><span class="french">Pétoncles grillés, zeste de citron, roquette</span></li>
-      <li><span class="item">Smoked Salmon Bites <span class="price">$10.49</span></span><span class="desc">Smoked salmon, cream cheese, capers on toast</span><span class="french">Saumon fumé, fromage à la crème, câpres sur toast</span></li>
-      <li><span class="item">Lobster Bisque Shot <span class="price">$6.99</span></span><span class="desc">Rich lobster soup served in a small cup</span><span class="french">Soupe de homard onctueuse servie en petite tasse</span></li>
     </ul>
+
+    <div class="image-container left" style="top: 1000px">
+      <div class="semicircle main-left-semicircle"></div>
+      <div class="label">Lobster Roll</div>
+    </div>
+    <div class="image-container right" style="top: 1250px">
+      <div class="semicircle main-right-semicircle"></div>
+      <div class="label">Fish and Chips</div>
+    </div>
+
     <h2>Main Courses</h2>
     <ul>
       <li><span class="item">Grilled Salmon <span class="price">$18.99</span></span><span class="desc">Atlantic salmon, lemon butter glaze, seasonal vegetables</span><span class="french">Saumon de l'Atlantique, glaçage citron-beurre, légumes de saison</span></li>
       <li><span class="item">Lobster Roll <span class="price">$16.99</span></span><span class="desc">Fresh lobster, brioche roll, celery, mayo</span><span class="french">Homard frais, pain brioché, céleri, mayonnaise</span></li>
-      <li><span class="item">Seafood Paella <span class="price">$21.99</span></span><span class="desc">Shrimp, mussels, clams, saffron rice, peas</span><span class="french">Crevettes, moules, palourdes, riz au safran, pois</span></li>
-      <li><span class="item">Blackened Tilapia <span class="price">$15.99</span></span><span class="desc">Cajun-seasoned tilapia, garlic rice, mango salsa</span><span class="french">Tilapia cajun, riz à l'ail, salsa mangue</span></li>
-      <li><span class="item">Shrimp Alfredo Pasta <span class="price">$17.49</span></span><span class="desc">Creamy alfredo sauce, linguine, grilled shrimp</span><span class="french">Sauce Alfredo crémeuse, linguine, crevettes grillées</span></li>
-      <li><span class="item">Grilled Swordfish Steak <span class="price">$19.99</span></span><span class="desc">Swordfish, lemon caper sauce, roasted veggies</span><span class="french">Espadon grillé, sauce citron câpres, légumes rôtis</span></li>
-      <li><span class="item">Crab-Stuffed Flounder <span class="price">$20.49</span></span><span class="desc">Flounder fillet, crab meat, baked with herbs</span><span class="french">Filet de flet, farci au crabe, cuit aux herbes</span></li>
-      <li><span class="item">Cajun Fish Tacos <span class="price">$14.99</span></span><span class="desc">Spicy white fish, slaw, chipotle mayo, tortillas</span><span class="french">Poisson blanc épicé, salade, mayo chipotle, tortillas</span></li>
-      <li><span class="item">Seafood Platter <span class="price">$25.99</span></span><span class="desc">Fried shrimp, calamari, fish fillet, fries</span><span class="french">Crevettes frites, calmars, filet de poisson, frites</span></li>
-      <li><span class="item">Octopus with Lemon Herb Sauce <span class="price">$22.99</span></span><span class="desc">Grilled octopus, lemon herb oil, potatoes</span><span class="french">Poulpe grillé, huile citron-herbes, pommes de terre</span></li>
-      <li><span class="item">Steamed Snow Crab Legs <span class="price">$26.49</span></span><span class="desc">Snow crab legs, garlic butter, corn on the cob</span><span class="french">Pattes de crabe des neiges, beurre à l'ail, épis de maïs</span></li>
-      <li><span class="item">Butter Poached Lobster Tail <span class="price">$29.99</span></span><span class="desc">Lobster tail, poached in butter, risotto</span><span class="french">Queue de homard pochée au beurre, risotto</span></li>
-      <li><span class="item">Stuffed Shrimp Skewers <span class="price">$18.49</span></span><span class="desc">Shrimp filled with cheese and herbs, grilled</span><span class="french">Crevettes farcies au fromage et herbes, grillées</span></li>
-      <li><span class="item">Pan-Seared Cod <span class="price">$16.99</span></span><span class="desc">Cod fillet, olive tapenade, baby greens</span><span class="french">Filet de morue, tapenade d'olives, jeunes pousses</span></li>
       <li><span class="item">Fish and Chips <span class="price">$13.99</span></span><span class="desc">Battered fish fillet, crispy fries, tartar sauce</span><span class="french">Poisson pané, frites croustillantes, sauce tartare</span></li>
-      <li><span class="item">Grilled Halibut <span class="price">$23.99</span></span><span class="desc">Halibut steak, grilled asparagus, dill cream</span><span class="french">Steak de flétan, asperges grillées, crème à l'aneth</span></li>
     </ul>
-<h2>Drinks</h2>
-<div class="drinks-grid">
-  <ul class="drinks-column">
-    <li><span class="item">Cola <span class="price">$2.99</span></span><span class="desc">Classic cola drink</span><span class="french">Boisson gazeuse classique</span></li>
-    <li><span class="item">Lemon Soda <span class="price">$2.99</span></span><span class="desc">Sparkling lemon-flavored soda</span><span class="french">Soda pétillant au citron</span></li>
-    <li><span class="item">Orange Fizz <span class="price">$3.49</span></span><span class="desc">Carbonated orange drink</span><span class="french">Boisson gazeuse à l'orange</span></li>
-    <li><span class="item">Ginger Ale <span class="price">$3.25</span></span><span class="desc">Mildly spicy ginger-flavored soda</span><span class="french">Soda au gingembre légèrement épicé</span></li>
-    <li><span class="item">Sparkling Lime <span class="price">$3.49</span></span><span class="desc">Lime soda with bubbles</span><span class="french">Soda pétillant au citron vert</span></li>
-  </ul>
-  <ul class="drinks-column">
-    <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><span class="desc">Fresh mango, cold water, natural sweetener</span><span class="french">Mangue fraîche, eau froide, édulcorant naturel</span></li>
-    <li><span class="item">Strawberry Smoothie <span class="price">$4.75</span></span><span class="desc">Strawberries, yogurt, honey, ice</span><span class="french">Fraises, yaourt, miel, glace</span></li>
-    <li><span class="item">Watermelon Juice <span class="price">$4.50</span></span><span class="desc">Chilled watermelon, mint, lime</span><span class="french">Pastèque fraîche, menthe, citron vert</span></li>
-    <li><span class="item">Pineapple Crush <span class="price">$4.25</span></span><span class="desc">Pineapple, coconut water, crushed ice</span><span class="french">Ananas, eau de coco, glace pilée</span></li>
-    <li><span class="item">Fresh Orange Juice <span class="price">$4.00</span></span><span class="desc">Fresh squeezed oranges, pulp</span><span class="french">Oranges fraîchement pressées, pulpe</span></li>
-  </ul>
-</div>
 
+    <h2>Drinks</h2>
+    <div class="drinks-grid">
+      <ul class="drinks-column">
+        <li><span class="item">Cola <span class="price">$2.99</span></span><span class="desc">Classic cola drink</span><span class="french">Boisson gazeuse classique</span></li>
+        <li><span class="item">Lemon Soda <span class="price">$2.99</span></span><span class="desc">Sparkling lemon-flavored soda</span><span class="french">Soda pétillant au citron</span></li>
+        <li><span class="item">Orange Fizz <span class="price">$3.49</span></span><span class="desc">Carbonated orange drink</span><span class="french">Boisson gazeuse à l'orange</span></li>
+      </ul>
+      <ul class="drinks-column">
+        <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><span class="desc">Fresh mango, cold water, natural sweetener</span><span class="french">Mangue fraîche, eau froide, édulcorant naturel</span></li>
+        <li><span class="item">Strawberry Smoothie <span class="price">$4.75</span></span><span class="desc">Strawberries, yogurt, honey, ice</span><span class="french">Fraises, yaourt, miel, glace</span></li>
+        <li><span class="item">Watermelon Juice <span class="price">$4.50</span></span><span class="desc">Chilled watermelon, mint, lime</span><span class="french">Pastèque fraîche, menthe, citron vert</span></li>
+      </ul>
+    </div>
   </main>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
 </body>
 </html>
