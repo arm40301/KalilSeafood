@@ -25,19 +25,20 @@
     }
     header {
       padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       background: var(--accent);
       color: white;
+      text-align: center;
+      position: relative;
     }
     #title {
-      text-align: center;
-      flex-grow: 1;
+      margin: 0;
     }
     .switches {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
     }
     .switch-label {
       display: flex;
@@ -160,7 +161,19 @@
     </div>
   </header>
   <main class="menu-section">
-    <p style="text-align:center;">Full menu content goes here...</p>
+    <h2 id="starters-title">Starters</h2>
+    <ul>
+      <li><span class="item">Shrimp Cocktail <span class="price">$9.99</span></span><span class="desc">Chilled shrimp, lemon wedges, tangy cocktail sauce</span></li>
+      <li><span class="item">Fried Calamari <span class="price">$10.99</span></span><span class="desc">Lightly breaded squid rings, garlic aioli</span></li>
+      <li><span class="item">Clam Chowder <span class="price">$8.49</span></span><span class="desc">Creamy soup with clams, potatoes, and celery</span></li>
+      <li><span class="item">Garlic Butter Mussels <span class="price">$9.49</span></span><span class="desc">Steamed mussels, garlic, parsley, white wine butter sauce</span></li>
+      <li><span class="item">Seafood Spring Rolls <span class="price">$7.99</span></span><span class="desc">Shrimp, crab, vegetables wrapped in rice paper</span></li>
+      <li><span class="item">Mini Crab Cakes <span class="price">$11.49</span></span><span class="desc">Lump crab meat, herbs, remoulade sauce</span></li>
+      <li><span class="item">Spicy Tuna Tartare <span class="price">$12.99</span></span><span class="desc">Fresh tuna, avocado, sesame oil, chili flakes</span></li>
+      <li><span class="item">Grilled Scallops <span class="price">$13.49</span></span><span class="desc">Seared scallops, lemon zest, arugula</span></li>
+      <li><span class="item">Smoked Salmon Bites <span class="price">$10.49</span></span><span class="desc">Smoked salmon, cream cheese, capers on toast</span></li>
+      <li><span class="item">Lobster Bisque Shot <span class="price">$6.99</span></span><span class="desc">Rich lobster soup served in a small cup</span></li>
+    </ul>
   </main>
   <script>
     function toggleDarkMode() {
@@ -169,51 +182,7 @@
 
     function toggleLanguage() {
       const isEnglish = document.getElementById('title').textContent === 'KHALIL SEAFOOD';
-
       document.getElementById('title').textContent = isEnglish ? 'KHALIL FRUITS DE MER' : 'KHALIL SEAFOOD';
-      document.getElementById('starters-title')?.textContent = isEnglish ? 'Entrées' : 'Starters';
-      document.getElementById('mains-title')?.textContent = isEnglish ? 'Plats principaux' : 'Mains';
-      document.getElementById('drinks-title')?.textContent = isEnglish ? 'Boissons' : 'Drinks';
-
-      const translations = {
-        'Shrimp Cocktail': 'Cocktail de crevettes',
-        'Fried Calamari': 'Calmars frits',
-        'Clam Chowder': 'Soupe de palourdes',
-        'Garlic Butter Mussels': 'Moules au beurre à l\'ail',
-        'Seafood Spring Rolls': 'Rouleaux de printemps aux fruits de mer',
-        'Mini Crab Cakes': 'Mini galettes de crabe',
-        'Spicy Tuna Tartare': 'Tartare de thon épicé',
-        'Grilled Scallops': 'Pétoncles grillés',
-        'Smoked Salmon Bites': 'Bouchées de saumon fumé',
-        'Lobster Bisque Shot': 'Soupe de homard',
-        'Grilled Salmon': 'Saumon grillé',
-        'Lobster Roll': 'Sandwich au homard',
-        'Seafood Paella': 'Paëlla aux fruits de mer',
-        'Blackened Tilapia': 'Tilapia noirci',
-        'Shrimp Alfredo Pasta': 'Pâtes Alfredo aux crevettes',
-        'Grilled Swordfish Steak': 'Espadon grillé',
-        'Crab-Stuffed Flounder': 'Plie farcie au crabe',
-        'Cajun Fish Tacos': 'Tacos de poisson cajun',
-        'Seafood Platter': 'Assiette de fruits de mer',
-        'Octopus with Lemon Herb Sauce': 'Poulpe aux herbes citronnées',
-        'Steamed Snow Crab Legs': 'Pattes de crabe des neiges vapeur',
-        'Butter Poached Lobster Tail': 'Queue de homard pochée au beurre',
-        'Stuffed Shrimp Skewers': 'Brochettes de crevettes farcies',
-        'Pan-Seared Cod': 'Morue poêlée',
-        'Fish and Chips': 'Poisson-frites',
-        'Grilled Halibut': 'Flétan grillé',
-        'Fresh Mango Juice': 'Jus de mangue frais',
-        'Strawberry Smoothie': 'Smoothie à la fraise',
-        'Watermelon Juice': 'Jus de pastèque',
-        'Pineapple Crush': 'Ananas frappé',
-        'Fresh Orange Juice': 'Jus d\'orange frais'
-      };
-
-      document.querySelectorAll('.item').forEach(el => {
-        const text = el.childNodes[0].nodeValue?.trim();
-        const translated = isEnglish ? translations[text] : Object.keys(translations).find(key => translations[key] === text);
-        if (translated) el.childNodes[0].nodeValue = isEnglish ? translated + ' ' : text + ' ';
-      });
     }
   </script>
 </body>
