@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KHALIL SEAFOOD</title>
+  <title>Khalil Seafood</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,115 +14,134 @@
 
     body {
       font-family: 'Open Sans', sans-serif;
-      color: #fff;
-      background: url('https://images.unsplash.com/photo-1600891963935-43eabfac9d61?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #0a1f2e;
+      color: #f0f0f0;
+      line-height: 1.6;
     }
 
     header {
       height: 100vh;
+      background: url('https://images.unsplash.com/photo-1600891963935-43eabfac9d61?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+    }
+
+    header img {
+      width: 120px;
+      margin-bottom: 1rem;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      letter-spacing: 2px;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: rgba(10, 31, 46, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      color: #4ecdc4;
+    }
+
+    .menu-preview li {
+      margin-bottom: 1.2rem;
+    }
+
+    .menu-preview .item {
+      font-weight: bold;
+    }
+
+    .menu-preview .desc {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .info {
+      background: #032d46;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .cta-btn {
+      background: #4ecdc4;
+      color: #032d46;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
       margin-top: 1rem;
     }
 
-    main {
-      background: rgba(255, 255, 255, 0.9);
-      color: #333;
-      backdrop-filter: blur(8px);
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: -4rem auto 2rem auto;
-      border-radius: 16px;
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      border-bottom: 2px solid #0077b6;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin-bottom: 1.5rem;
-    }
-
-    .item {
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    .price {
-      float: right;
-      font-weight: bold;
-    }
-
-    .desc {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    .french {
-      font-style: italic;
-      font-size: 0.85rem;
-      color: #777;
+    .cta-btn:hover {
+      background: #3ab9b1;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>KHALIL SEAFOOD</h1>
-    <p>Fresh Mediterranean Flavours</p>
+    <div class="content">
+      <img src="https://img.pikbest.com/png-images/20241111/-22creative-fish-logo-ideas-for-modern-and-traditional-brands-22_11079457.png!sw800" alt="Khalil Logo">
+      <h1>KHALIL SEAFOOD</h1>
+      <p>Best lobster rolls in Ottawa</p>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Starters</h2>
-      <ul>
-        <li><span class="item">Shrimp Cocktail <span class="price">$9.99</span></span><br><span class="desc">Chilled shrimp, lemon wedges, tangy cocktail sauce</span><br><span class="french">Crevettes fraîches, quartiers de citron, sauce cocktail relevée</span></li>
-        <li><span class="item">Fried Calamari <span class="price">$10.99</span></span><br><span class="desc">Lightly breaded squid rings, garlic aioli</span><br><span class="french">Rondelles de calmars panées, aïoli à l'ail</span></li>
-        <!-- Add more starter items as needed -->
-      </ul>
-    </section>
+  <section class="section">
+    <h2>Welcome to Khalil Seafood</h2>
+    <p>Located in the heart of Ottawa, Khalil Seafood brings you the freshest catch, expertly grilled and served with love. Whether you're craving buttery lobster rolls or a hearty seafood platter, we’ve got something for every ocean lover.</p>
+  </section>
 
-    <section>
-      <h2>Main Courses</h2>
-      <ul>
-        <li><span class="item">Grilled Salmon <span class="price">$18.99</span></span><br><span class="desc">Atlantic salmon, lemon butter glaze, seasonal vegetables</span><br><span class="french">Saumon de l'Atlantique, glaçage citron-beurre, légumes de saison</span></li>
-        <li><span class="item">Seafood Platter <span class="price">$25.99</span></span><br><span class="desc">Fried shrimp, calamari, fish fillet, fries</span><br><span class="french">Crevettes frites, calmars, filet de poisson, frites</span></li>
-        <!-- Add more main items as needed -->
-      </ul>
-    </section>
+  <section class="section">
+    <h2>Menu Highlights</h2>
+    <ul class="menu-preview">
+      <li><span class="item">Lobster Roll</span><br><span class="desc">Fresh lobster on a warm brioche roll with lemon butter sauce</span></li>
+      <li><span class="item">Seafood Platter</span><br><span class="desc">A generous selection of shrimp, calamari, and grilled fish</span></li>
+      <li><span class="item">Grilled Salmon</span><br><span class="desc">Atlantic salmon fillet served with seasonal vegetables</span></li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Drinks</h2>
-      <ul>
-        <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><br><span class="desc">Fresh mango, cold water, natural sweetener</span><br><span class="french">Mangue fraîche, eau froide, édulcorant naturel</span></li>
-        <li><span class="item">Cola <span class="price">$2.99</span></span><br><span class="desc">Classic cola drink</span><br><span class="french">Boisson gazeuse classique</span></li>
-        <!-- Add more drinks as needed -->
-      </ul>
-    </section>
-  </main>
+  <section class="info">
+    <h2>Visit Us</h2>
+    <p>123 Ocean Street, Ottawa, ON</p>
+    <p>Open: Mon–Sat, 11am – 9pm</p>
+    <p>Call: (613) 555-0199</p>
+    <button class="cta-btn" onclick="location.href='contact.html'">Find Us on the Map</button>
+  </section>
 </body>
 </html>
