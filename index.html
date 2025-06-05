@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khalil Seafood</title>
+  <title>Khalil Seafood Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
@@ -20,7 +20,7 @@
     }
 
     header {
-      height: 100vh;
+      height: 60vh;
       background: url('https://images.unsplash.com/photo-1600891963935-43eabfac9d61?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
       background-size: cover;
       background-attachment: fixed;
@@ -47,69 +47,49 @@
     }
 
     header img {
-      width: 120px;
+      width: 100px;
       margin-bottom: 1rem;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
     }
 
     .section {
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
-      background-color: rgba(10, 31, 46, 0.9);
+      background-color: rgba(10, 31, 46, 0.95);
       border-radius: 12px;
       box-shadow: 0 0 25px rgba(0,0,0,0.2);
     }
 
     .section h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-family: 'Playfair Display', serif;
       color: #4ecdc4;
     }
 
-    .menu-preview li {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
       margin-bottom: 1.2rem;
     }
 
-    .menu-preview .item {
+    .item {
       font-weight: bold;
+      font-size: 1.1rem;
     }
 
-    .menu-preview .desc {
+    .desc {
       font-size: 0.95rem;
       color: #ccc;
-    }
-
-    .info {
-      background: #032d46;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .cta-btn {
-      background: #4ecdc4;
-      color: #032d46;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
-    .cta-btn:hover {
-      background: #3ab9b1;
     }
   </style>
 </head>
@@ -117,31 +97,25 @@
   <header>
     <div class="content">
       <img src="https://img.pikbest.com/png-images/20241111/-22creative-fish-logo-ideas-for-modern-and-traditional-brands-22_11079457.png!sw800" alt="Khalil Logo">
-      <h1>KHALIL SEAFOOD</h1>
-      <p>Best lobster rolls in Ottawa</p>
+      <h1>KHALIL SEAFOOD MENU</h1>
     </div>
   </header>
 
   <section class="section">
-    <h2>Welcome to Khalil Seafood</h2>
-    <p>Located in the heart of Ottawa, Khalil Seafood brings you the freshest catch, expertly grilled and served with love. Whether you're craving buttery lobster rolls or a hearty seafood platter, we’ve got something for every ocean lover.</p>
-  </section>
-
-  <section class="section">
-    <h2>Menu Highlights</h2>
-    <ul class="menu-preview">
+    <h2>Starters & Mains</h2>
+    <ul>
       <li><span class="item">Lobster Roll</span><br><span class="desc">Fresh lobster on a warm brioche roll with lemon butter sauce</span></li>
       <li><span class="item">Seafood Platter</span><br><span class="desc">A generous selection of shrimp, calamari, and grilled fish</span></li>
       <li><span class="item">Grilled Salmon</span><br><span class="desc">Atlantic salmon fillet served with seasonal vegetables</span></li>
     </ul>
-  </section>
 
-  <section class="info">
-    <h2>Visit Us</h2>
-    <p>123 Ocean Street, Ottawa, ON</p>
-    <p>Open: Mon–Sat, 11am – 9pm</p>
-    <p>Call: (613) 555-0199</p>
-    <button class="cta-btn" onclick="location.href='contact.html'">Find Us on the Map</button>
+    <h2>Drinks</h2>
+    <ul>
+      <li><span class="item">Smoothies</span><br><span class="desc">Strawberry, mango, chocolate, vanilla – blended with yogurt and honey</span></li>
+      <li><span class="item">Fresh Juices</span><br><span class="desc">Orange, watermelon, pineapple, pomegranate – freshly squeezed</span></li>
+      <li><span class="item">Milkshakes</span><br><span class="desc">Classic chocolate, vanilla, banana, and mixed berry</span></li>
+      <li><span class="item">Soda Options</span><br><span class="desc">Cola, lemon-lime, orange soda, ginger ale</span></li>
+    </ul>
   </section>
 </body>
 </html>
