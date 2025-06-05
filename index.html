@@ -89,9 +89,49 @@
       font-size: 1.1rem;
       color: #ccc;
     }
-  </style>
+      .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(10, 31, 46, 0.95);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .top-nav .logo img {
+      width: 50px;
+    }
+
+    .top-nav .nav-links a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .top-nav .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-top: 80px;
+    }  
+</style>
 </head>
 <body>
+  <nav class="top-nav">
+    <div class="logo">
+      <img src="https://img.pikbest.com/png-images/20241111/-22creative-fish-logo-ideas-for-modern-and-traditional-brands-22_11079457.png!sw800" alt="Khalil Logo">
+    </div>
+    <div class="nav-links">
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
   <header>
     <div class="header-content">
       <h1>Khalil Seafood</h1>
