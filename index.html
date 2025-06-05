@@ -43,18 +43,25 @@
       padding: 2rem;
       max-width: 800px;
       margin: 2rem auto;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.85); /* slightly transparent */
       border-radius: 16px;
-      border: 1px solid #ccc;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(4px);
+      box-shadow:
+        0 0 30px 15px rgba(255, 255, 255, 0.15), /* soft white glow outward */
+        0 0 60px 30px rgba(0, 0, 0, 0.2);        /* outer subtle shadow for blending */;
+      backdrop-filter: blur(6px); /* optional: adds depth */
+      border: none; /* remove hard border */
     }
 
+
     body.dark .menu-section {
-      background: rgba(34, 34, 34, 0.9);
-      border: 1px solid #444;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      background: rgba(34, 34, 34, 0.85);
+      box-shadow:
+        0 0 30px 15px rgba(34, 34, 34, 0.3),
+        0 0 60px 30px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      border: none;
     }
+
 
     h2 {
       border-bottom: 2px solid var(--accent);
