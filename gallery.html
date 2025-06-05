@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khalil Seafood - Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #0a1f2e;
+      color: #fff;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(10, 31, 46, 0.95);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .top-nav .logo img {
+      width: 50px;
+      cursor: pointer;
+    }
+
+    .top-nav .nav-links a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .top-nav .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      margin-top: 100px;
+      padding: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #4ecdc4;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://img.pikbest.com/png-images/20241111/-22creative-fish-logo-ideas-for-modern-and-traditional-brands-22_11079457.png!sw800" alt="Khalil Logo">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="menu.html">Menu</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <main>
+    <h1>Gallery</h1>
+    <div class="gallery">
+      <img src="https://i.pinimg.com/736x/64/1e/7b/641e7b7cb3007cf9ca67c334a70096eb.jpg" alt="Dish 1">
+      <img src="https://lobsteranywhere.com/wp-content/uploads/2023/10/Lobster-Scampi-Recipe-768x1024.jpg" alt="Dish 2">
+      <img src="https://i.pinimg.com/736x/ef/61/ab/ef61ab8100c38dc72ebe58991d305434.jpg" alt="Dish 3">
+      <img src="https://i.pinimg.com/736x/96/d9/cb/96d9cbfb721e6aef044ce4b2eb9b1b61.jpg" alt="Dish 4">
+      <img src="https://www.sarcasticcooking.com/wp-content/uploads/2020/06/grilled-cajun-tilapia-735x1103.jpg" alt="Dish 5">
+      <img src="https://www.tourismpei.com/sites/default/files/styles/card/public/media/images/Seafood%20Chowder.jpg?h=a8096eb1&itok=kiTudTnl" alt="Dish 6">
+    </div>
+  </main>
+</body>
+</html>
