@@ -62,39 +62,43 @@
       background-color: #ccc;
       transition: .4s;
       border-radius: 34px;
-      text-align: center;
-      font-size: 12px;
-      line-height: 24px;
-      color: black;
     }
     .slider:before {
       position: absolute;
-      content: "";
+      content: attr(data-label);
       height: 18px;
       width: 18px;
       left: 3px;
       bottom: 3px;
       background-color: white;
+      color: black;
+      font-size: 10px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: .4s;
       border-radius: 50%;
     }
-    .dark-mode-toggle input:checked + .slider::after {
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+    input:checked + .slider.dark-mode::before {
       content: 'D';
     }
-    .dark-mode-toggle .slider::after {
+    .slider.dark-mode::before {
       content: 'L';
     }
-    .lang-toggle input:checked + .slider::after {
+    input:checked + .slider.lang-mode::before {
       content: 'FR';
+      font-size: 8px;
     }
-    .lang-toggle .slider::after {
+    .slider.lang-mode::before {
       content: 'EN';
+      font-size: 8px;
     }
     input:checked + .slider {
       background-color: #2196F3;
-    }
-    input:checked + .slider:before {
-      transform: translateX(24px);
     }
     .menu-section {
       padding: 2rem;
@@ -138,16 +142,16 @@
   <header>
     <h1 id="title">KHALIL SEAFOOD</h1>
     <div class="switches">
-      <label class="switch-label dark-mode-toggle">
+      <label class="switch-label">
         <label class="switch">
           <input type="checkbox" onchange="toggleDarkMode()">
-          <span class="slider"></span>
+          <span class="slider dark-mode"></span>
         </label>
       </label>
-      <label class="switch-label lang-toggle">
+      <label class="switch-label">
         <label class="switch">
           <input type="checkbox" onchange="toggleLanguage()">
-          <span class="slider"></span>
+          <span class="slider lang-mode"></span>
         </label>
       </label>
     </div>
