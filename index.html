@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khalil Seafood</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #0a1f2e;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1600891963935-43eabfac9d61?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: #4ecdc4;
+      color: #032d46;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #3ab9b1;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #4ecdc4;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Khalil Seafood</h1>
+      <p>Ottawa's Premier Seafood Experience</p>
+      <a href="menu.html" class="btn">View Menu</a>
+    </div>
+  </header>
+
+  <section class="section about">
+    <h2>About Us</h2>
+    <p>At Khalil Seafood, we take pride in serving the freshest ocean fare in the heart of Ottawa. From classic lobster rolls to our famous grilled seafood platters, each dish is prepared with care, flavor, and tradition.</p>
+  </section>
+</body>
+</html>
