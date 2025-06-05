@@ -3,166 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KHALIL SEAFOOD Menu</title>
+  <title>KHALIL SEAFOOD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-light: #f9f9f9;
-      --text-light: #333;
-      --bg-dark: #1a1a1a;
-      --text-dark: #eee;
-      --accent: #0077b6;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://images.unsplash.com/photo-1690983322857-0811d47fedfc?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbnUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') no-repeat center center fixed;
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      background: url('https://images.unsplash.com/photo-1600891963935-43eabfac9d61?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: var(--text-light);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    body.dark {
-      background: url('https://images.unsplash.com/photo-1690983322857-0811d47fedfc?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbnUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') no-repeat center center fixed;
-      background-size: cover;
-      color: var(--text-dark);
     }
 
     header {
-      padding: 1rem 2rem;
-      background: var(--accent);
-      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      background: rgba(0, 0, 0, 0.6);
     }
 
-    #title {
-      margin: 0;
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
     }
 
-    .menu-section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 2rem auto;
-      background: rgba(255, 255, 255, 0.8); /* slightly transparent */
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    main {
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      backdrop-filter: blur(8px);
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: -4rem auto 2rem auto;
       border-radius: 16px;
-      box-shadow:
-        0 0 30px 15px rgba(255, 255, 255, 0.15), /* soft white glow outward */
-        0 0 60px 30px rgba(0, 0, 0, 0.2);        /* outer subtle shadow for blending */;
-      backdrop-filter: blur(6px); /* optional: adds depth */
-      border: none; /* remove hard border */
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     }
-
-
-    body.dark .menu-section {
-      background: rgba(34, 34, 34, 0.85);
-      box-shadow:
-        0 0 30px 15px rgba(34, 34, 34, 0.3),
-        0 0 60px 30px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(6px);
-      border: none;
-    }
-
 
     h2 {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.3rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      border-bottom: 2px solid #0077b6;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
     }
 
     ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
 
     li {
-      margin: 0.75rem 0;
+      margin-bottom: 1.5rem;
     }
 
     .item {
       font-weight: bold;
-      display: block;
-    }
-
-    .desc {
-      font-size: 0.9em;
-      color: gray;
-    }
-
-    .french {
-      font-style: italic;
-      font-size: 0.8em;
-      color: #777;
-      display: block;
+      font-size: 1.1rem;
     }
 
     .price {
       float: right;
+      font-weight: bold;
     }
 
-    .drinks-grid {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
+    .desc {
+      font-size: 0.95rem;
+      color: #555;
     }
 
-    .drinks-column {
-      flex: 1;
-      min-width: 300px;
+    .french {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 id="title">KHALIL SEAFOOD</h1>
+    <h1>KHALIL SEAFOOD</h1>
+    <p>Fresh Mediterranean Flavours</p>
   </header>
-  <main class="menu-section">
-    <h2>Starters</h2>
-    <ul>
-      <li><span class="item">Shrimp Cocktail <span class="price">$9.99</span></span><span class="desc">Chilled shrimp, lemon wedges, tangy cocktail sauce</span><span class="french">Crevettes fraîches, quartiers de citron, sauce cocktail relevée</span></li>
-      <li><span class="item">Fried Calamari <span class="price">$10.99</span></span><span class="desc">Lightly breaded squid rings, garlic aioli</span><span class="french">Rondelles de calmars panées, aïoli à l'ail</span></li>
-      <li><span class="item">Garlic Butter Mussels <span class="price">$9.49</span></span><span class="desc">Steamed mussels, garlic, parsley, white wine butter sauce</span><span class="french">Moules vapeur, ail, persil, sauce au beurre et vin blanc</span></li>
-      <li><span class="item">Spicy Tuna Tartare <span class="price">$12.99</span></span><span class="desc">Fresh tuna, avocado, sesame oil, chili flakes</span><span class="french">Thon frais, avocat, huile de sésame, piment</span></li>
-      <li><span class="item">Grilled Scallops <span class="price">$13.49</span></span><span class="desc">Seared scallops, lemon zest, arugula</span><span class="french">Pétoncles grillés, zeste de citron, roquette</span></li>
-      <li><span class="item">Smoked Salmon Bites <span class="price">$10.49</span></span><span class="desc">Smoked salmon, cream cheese, capers on toast</span><span class="french">Saumon fumé, fromage à la crème, câpres sur toast</span></li>
-    </ul>
 
-    <h2>Main Courses</h2>
-    <ul>
-      <li><span class="item">Grilled Salmon <span class="price">$18.99</span></span><span class="desc">Atlantic salmon, lemon butter glaze, seasonal vegetables</span><span class="french">Saumon de l'Atlantique, glaçage citron-beurre, légumes de saison</span></li>
-      <li><span class="item">Lobster Roll <span class="price">$16.99</span></span><span class="desc">Fresh lobster, brioche roll, celery, mayo</span><span class="french">Homard frais, pain brioché, céleri, mayonnaise</span></li>
-      <li><span class="item">Shrimp Alfredo Pasta <span class="price">$17.49</span></span><span class="desc">Creamy alfredo sauce, linguine, grilled shrimp</span><span class="french">Sauce Alfredo crémeuse, linguine, crevettes grillées</span></li>
-      <li><span class="item">Grilled Swordfish Steak <span class="price">$19.99</span></span><span class="desc">Swordfish, lemon caper sauce, roasted veggies</span><span class="french">Espadon grillé, sauce citron câpres, légumes rôtis</span></li>
-      <li><span class="item">Cajun Fish Tacos <span class="price">$14.99</span></span><span class="desc">Spicy white fish, slaw, chipotle mayo, tortillas</span><span class="french">Poisson blanc épicé, salade, mayo chipotle, tortillas</span></li>
-      <li><span class="item">Seafood Platter <span class="price">$25.99</span></span><span class="desc">Fried shrimp, calamari, fish fillet, fries</span><span class="french">Crevettes frites, calmars, filet de poisson, frites</span></li>
-      <li><span class="item">Octopus with Lemon Herb Sauce <span class="price">$22.99</span></span><span class="desc">Grilled octopus, lemon herb oil, potatoes</span><span class="french">Poulpe grillé, huile citron-herbes, pommes de terre</span></li>
-      <li><span class="item">Steamed Snow Crab Legs <span class="price">$26.49</span></span><span class="desc">Snow crab legs, garlic butter, corn on the cob</span><span class="french">Pattes de crabe des neiges, beurre à l'ail, épis de maïs</span></li>
-      <li><span class="item">Butter Poached Lobster Tail <span class="price">$29.99</span></span><span class="desc">Lobster tail, poached in butter, risotto</span><span class="french">Queue de homard pochée au beurre, risotto</span></li>
-      <li><span class="item">Stuffed Shrimp Skewers <span class="price">$18.49</span></span><span class="desc">Shrimp filled with cheese and herbs, grilled</span><span class="french">Crevettes farcies au fromage et herbes, grillées</span></li>
-      <li><span class="item">Pan-Seared Cod <span class="price">$16.99</span></span><span class="desc">Cod fillet, olive tapenade, baby greens</span><span class="french">Filet de morue, tapenade d'olives, jeunes pousses</span></li>
-      <li><span class="item">Fish and Chips <span class="price">$13.99</span></span><span class="desc">Battered fish fillet, crispy fries, tartar sauce</span><span class="french">Poisson pané, frites croustillantes, sauce tartare</span></li>
-    </ul>
+  <main>
+    <section>
+      <h2>Starters</h2>
+      <ul>
+        <li><span class="item">Shrimp Cocktail <span class="price">$9.99</span></span><br><span class="desc">Chilled shrimp, lemon wedges, tangy cocktail sauce</span><br><span class="french">Crevettes fraîches, quartiers de citron, sauce cocktail relevée</span></li>
+        <li><span class="item">Fried Calamari <span class="price">$10.99</span></span><br><span class="desc">Lightly breaded squid rings, garlic aioli</span><br><span class="french">Rondelles de calmars panées, aïoli à l'ail</span></li>
+        <!-- Add more starter items as needed -->
+      </ul>
+    </section>
 
-    <h2>Drinks</h2>
-    <div class="drinks-grid">
-      <ul class="drinks-column">
-        <li><span class="item">Cola <span class="price">$2.99</span></span><span class="desc">Classic cola drink</span><span class="french">Boisson gazeuse classique</span></li>
-        <li><span class="item">Lemon Soda <span class="price">$2.99</span></span><span class="desc">Sparkling lemon-flavored soda</span><span class="french">Soda pétillant au citron</span></li>
-        <li><span class="item">Orange Fizz <span class="price">$3.49</span></span><span class="desc">Carbonated orange drink</span><span class="french">Boisson gazeuse à l'orange</span></li>
-        <li><span class="item">Ginger Ale <span class="price">$3.25</span></span><span class="desc">Mildly spicy ginger-flavored soda</span><span class="french">Soda au gingembre légèrement épicé</span></li>
-        <li><span class="item">Sparkling Lime <span class="price">$3.49</span></span><span class="desc">Lime soda with bubbles</span><span class="french">Soda pétillant au citron vert</span></li>
+    <section>
+      <h2>Main Courses</h2>
+      <ul>
+        <li><span class="item">Grilled Salmon <span class="price">$18.99</span></span><br><span class="desc">Atlantic salmon, lemon butter glaze, seasonal vegetables</span><br><span class="french">Saumon de l'Atlantique, glaçage citron-beurre, légumes de saison</span></li>
+        <li><span class="item">Seafood Platter <span class="price">$25.99</span></span><br><span class="desc">Fried shrimp, calamari, fish fillet, fries</span><br><span class="french">Crevettes frites, calmars, filet de poisson, frites</span></li>
+        <!-- Add more main items as needed -->
       </ul>
-      <ul class="drinks-column">
-        <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><span class="desc">Fresh mango, cold water, natural sweetener</span><span class="french">Mangue fraîche, eau froide, édulcorant naturel</span></li>
-        <li><span class="item">Strawberry Smoothie <span class="price">$4.75</span></span><span class="desc">Strawberries, yogurt, honey, ice</span><span class="french">Fraises, yaourt, miel, glace</span></li>
-        <li><span class="item">Watermelon Juice <span class="price">$4.50</span></span><span class="desc">Chilled watermelon, mint, lime</span><span class="french">Pastèque fraîche, menthe, citron vert</span></li>
-        <li><span class="item">Pineapple Crush <span class="price">$4.25</span></span><span class="desc">Pineapple, coconut water, crushed ice</span><span class="french">Ananas, eau de coco, glace pilée</span></li>
-        <li><span class="item">Fresh Orange Juice <span class="price">$4.00</span></span><span class="desc">Fresh squeezed oranges, pulp</span><span class="french">Oranges fraîchement pressées, pulpe</span></li>
+    </section>
+
+    <section>
+      <h2>Drinks</h2>
+      <ul>
+        <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><br><span class="desc">Fresh mango, cold water, natural sweetener</span><br><span class="french">Mangue fraîche, eau froide, édulcorant naturel</span></li>
+        <li><span class="item">Cola <span class="price">$2.99</span></span><br><span class="desc">Classic cola drink</span><br><span class="french">Boisson gazeuse classique</span></li>
+        <!-- Add more drinks as needed -->
       </ul>
-    </div>
+    </section>
   </main>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
 </body>
 </html>
