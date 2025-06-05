@@ -12,73 +12,91 @@
       --text-dark: #eee;
       --accent: #0077b6;
     }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #dbeef3;
+      background: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: var(--text-light);
       transition: background 0.3s, color 0.3s;
     }
+
     body.dark {
-      background: #0d1a1f;
+      background: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: var(--text-dark);
     }
+
     header {
       padding: 1rem 2rem;
       background: var(--accent);
       color: white;
       text-align: center;
     }
+
     #title {
       margin: 0;
     }
+
     .menu-section {
       padding: 2rem;
       max-width: 800px;
       margin: 2rem auto;
-      background: white;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 16px;
       border: 1px solid #ccc;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(4px);
     }
+
     body.dark .menu-section {
-      background: #222;
+      background: rgba(34, 34, 34, 0.9);
       border: 1px solid #444;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
+
     h2 {
       border-bottom: 2px solid var(--accent);
       padding-bottom: 0.3rem;
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     li {
       margin: 0.75rem 0;
     }
+
     .item {
       font-weight: bold;
       display: block;
     }
+
     .desc {
       font-size: 0.9em;
       color: gray;
     }
+
     .french {
       font-style: italic;
       font-size: 0.8em;
       color: #777;
       display: block;
     }
+
     .price {
       float: right;
     }
+
     .drinks-grid {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
     }
+
     .drinks-column {
       flex: 1;
       min-width: 300px;
