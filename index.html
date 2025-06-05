@@ -4,7 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KHALIL SEAFOOD Menu</title>
-  <style>/* styles remain unchanged */</style>
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --text-light: #333;
+      --bg-dark: #1a1a1a;
+      --text-dark: #eee;
+      --accent: #0077b6;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #dbeef3;
+      color: var(--text-light);
+    }
+    header {
+      padding: 1rem 2rem;
+      background: var(--accent);
+      color: white;
+      text-align: center;
+    }
+    .menu-section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 16px;
+      border: 2px solid #0077b6;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      margin-top: 3rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border-bottom: 1px dashed #ccc;
+    }
+    .item {
+      font-weight: bold;
+      display: inline-block;
+      width: 60%;
+    }
+    .price {
+      float: right;
+      font-weight: bold;
+      color: #0077b6;
+    }
+    .desc {
+      font-size: 0.9em;
+      color: gray;
+    }
+    .french {
+      font-style: italic;
+      font-size: 0.85em;
+      color: #777;
+    }
+    .drinks-grid {
+      display: flex;
+      gap: 5rem;
+      flex-wrap: wrap;
+    }
+    .drinks-column {
+      flex: 1;
+      min-width: 300px;
+    }
+    .image-container {
+      position: absolute;
+      width: 300px;
+    }
+    .image-container .semicircle {
+      width: 300px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 0 0 300px 300px;
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 60%, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 60%, transparent);
+    }
+    .semi-right {
+      right: -150px;
+    }
+    .semi-left {
+      left: -150px;
+      transform: scaleX(-1);
+    }
+    .starter-semicircle {
+      background-image: url('https://www.foodandwine.com/thmb/eJbvl3xF29aslGsseo5ekZrmL0s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Dirty-Martini-Shrimp-Cocktail-FT-Recipe0624-17d9fd13705a402da5d673053929ba6a.jpg');
+    }
+    .main-left-semicircle {
+      background-image: url('https://images.squarespace-cdn.com/content/v1/5ea5f3913b0ccf06d0ec2563/1594402435034-7900Y55B6VZ71CTKK2JH/Lobster+Roll+%286%29.jpg?format=2500w');
+    }
+    .main-right-semicircle {
+      background-image: url('https://media.timeout.com/images/105940676/750/562/image.jpg');
+    }
+    .label {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #444;
+      margin-top: 4px;
+    }
+  </style>
 </head>
 <body>
   <header>
