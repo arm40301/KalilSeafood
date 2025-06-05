@@ -56,8 +56,17 @@
     }
     li {
       margin: 0.5rem 0;
-      display: flex;
-      justify-content: space-between;
+    }
+    .item {
+      font-weight: bold;
+      display: block;
+    }
+    .desc {
+      font-size: 0.9em;
+      color: gray;
+    }
+    .price {
+      float: right;
     }
   </style>
 </head>
@@ -73,25 +82,52 @@
     <section>
       <h2 id="starters-title">Starters</h2>
       <ul id="starters">
-        <li><span class="item">Shrimp Cocktail</span><span class="price">$9.99</span></li>
-        <li><span class="item">Fried Calamari</span><span class="price">$10.99</span></li>
-        <li><span class="item">Clam Chowder</span><span class="price">$8.49</span></li>
+        <li><span class="item">Shrimp Cocktail <span class="price">$9.99</span></span><span class="desc">Chilled shrimp, lemon wedges, tangy cocktail sauce</span></li>
+        <li><span class="item">Fried Calamari <span class="price">$10.99</span></span><span class="desc">Lightly breaded squid rings, garlic aioli</span></li>
+        <li><span class="item">Clam Chowder <span class="price">$8.49</span></span><span class="desc">Creamy soup with clams, potatoes, and celery</span></li>
+        <li><span class="item">Garlic Butter Mussels <span class="price">$9.49</span></span><span class="desc">Steamed mussels, garlic, parsley, white wine butter sauce</span></li>
+        <li><span class="item">Seafood Spring Rolls <span class="price">$7.99</span></span><span class="desc">Shrimp, crab, vegetables wrapped in rice paper</span></li>
+        <li><span class="item">Mini Crab Cakes <span class="price">$11.49</span></span><span class="desc">Lump crab meat, herbs, remoulade sauce</span></li>
+        <li><span class="item">Spicy Tuna Tartare <span class="price">$12.99</span></span><span class="desc">Fresh tuna, avocado, sesame oil, chili flakes</span></li>
+        <li><span class="item">Grilled Scallops <span class="price">$13.49</span></span><span class="desc">Seared scallops, lemon zest, arugula</span></li>
+        <li><span class="item">Smoked Salmon Bites <span class="price">$10.49</span></span><span class="desc">Smoked salmon, cream cheese, capers on toast</span></li>
+        <li><span class="item">Lobster Bisque Shot <span class="price">$6.99</span></span><span class="desc">Rich lobster soup served in a small cup</span></li>
       </ul>
     </section>
     <section>
       <h2 id="mains-title">Mains</h2>
       <ul id="mains">
-        <li><span class="item">Grilled Salmon</span><span class="price">$18.99</span></li>
-        <li><span class="item">Lobster Roll</span><span class="price">$16.99</span></li>
-        <li><span class="item">Seafood Paella</span><span class="price">$21.99</span></li>
+        <li><span class="item">Grilled Salmon <span class="price">$18.99</span></span><span class="desc">Atlantic salmon, lemon butter glaze, seasonal vegetables</span></li>
+        <li><span class="item">Lobster Roll <span class="price">$16.99</span></span><span class="desc">Fresh lobster, brioche roll, celery, mayo</span></li>
+        <li><span class="item">Seafood Paella <span class="price">$21.99</span></span><span class="desc">Shrimp, mussels, clams, saffron rice, peas</span></li>
+        <li><span class="item">Blackened Tilapia <span class="price">$15.99</span></span><span class="desc">Cajun-seasoned tilapia, garlic rice, mango salsa</span></li>
+        <li><span class="item">Shrimp Alfredo Pasta <span class="price">$17.49</span></span><span class="desc">Creamy alfredo sauce, linguine, grilled shrimp</span></li>
+        <li><span class="item">Grilled Swordfish Steak <span class="price">$19.99</span></span><span class="desc">Swordfish, lemon caper sauce, roasted veggies</span></li>
+        <li><span class="item">Crab-Stuffed Flounder <span class="price">$20.49</span></span><span class="desc">Flounder fillet, crab meat, baked with herbs</span></li>
+        <li><span class="item">Cajun Fish Tacos <span class="price">$14.99</span></span><span class="desc">Spicy white fish, slaw, chipotle mayo, tortillas</span></li>
+        <li><span class="item">Seafood Platter <span class="price">$25.99</span></span><span class="desc">Fried shrimp, calamari, fish fillet, fries</span></li>
+        <li><span class="item">Octopus with Lemon Herb Sauce <span class="price">$22.99</span></span><span class="desc">Grilled octopus, lemon herb oil, potatoes</span></li>
+        <li><span class="item">Steamed Snow Crab Legs <span class="price">$26.49</span></span><span class="desc">Snow crab legs, garlic butter, corn on the cob</span></li>
+        <li><span class="item">Butter Poached Lobster Tail <span class="price">$29.99</span></span><span class="desc">Lobster tail, poached in butter, risotto</span></li>
+        <li><span class="item">Stuffed Shrimp Skewers <span class="price">$18.49</span></span><span class="desc">Shrimp filled with cheese and herbs, grilled</span></li>
+        <li><span class="item">Pan-Seared Cod <span class="price">$16.99</span></span><span class="desc">Cod fillet, olive tapenade, baby greens</span></li>
+        <li><span class="item">Fish and Chips <span class="price">$13.99</span></span><span class="desc">Battered fish fillet, crispy fries, tartar sauce</span></li>
+        <li><span class="item">Grilled Halibut <span class="price">$23.99</span></span><span class="desc">Halibut steak, grilled asparagus, dill cream</span></li>
       </ul>
     </section>
     <section>
       <h2 id="drinks-title">Drinks</h2>
       <ul id="drinks">
-        <li><span class="item">Sparkling Water</span><span class="price">$2.99</span></li>
-        <li><span class="item">White Wine</span><span class="price">$7.50</span></li>
-        <li><span class="item">Lemon Iced Tea</span><span class="price">$3.49</span></li>
+        <li><span class="item">Cola <span class="price">$2.99</span></span></li>
+        <li><span class="item">Lemon Soda <span class="price">$2.99</span></span></li>
+        <li><span class="item">Orange Fizz <span class="price">$3.49</span></span></li>
+        <li><span class="item">Ginger Ale <span class="price">$3.25</span></span></li>
+        <li><span class="item">Sparkling Lime <span class="price">$3.49</span></span></li>
+        <li><span class="item">Fresh Mango Juice <span class="price">$4.25</span></span><span class="desc">Fresh mango, cold water, natural sweetener</span></li>
+        <li><span class="item">Strawberry Smoothie <span class="price">$4.75</span></span><span class="desc">Strawberries, yogurt, honey, ice</span></li>
+        <li><span class="item">Watermelon Juice <span class="price">$4.50</span></span><span class="desc">Chilled watermelon, mint, lime</span></li>
+        <li><span class="item">Pineapple Crush <span class="price">$4.25</span></span><span class="desc">Pineapple, coconut water, crushed ice</span></li>
+        <li><span class="item">Fresh Orange Juice <span class="price">$4.00</span></span><span class="desc">Fresh squeezed oranges, pulp</span></li>
       </ul>
     </section>
   </main>
@@ -109,21 +145,6 @@
       document.getElementById('starters-title').textContent = isEnglish ? 'Entrées' : 'Starters';
       document.getElementById('mains-title').textContent = isEnglish ? 'Plats principaux' : 'Mains';
       document.getElementById('drinks-title').textContent = isEnglish ? 'Boissons' : 'Drinks';
-
-      const starters = document.getElementById('starters').children;
-      starters[0].children[0].textContent = isEnglish ? 'Cocktail de crevettes' : 'Shrimp Cocktail';
-      starters[1].children[0].textContent = isEnglish ? 'Calmars frits' : 'Fried Calamari';
-      starters[2].children[0].textContent = isEnglish ? 'Soupe de palourdes' : 'Clam Chowder';
-
-      const mains = document.getElementById('mains').children;
-      mains[0].children[0].textContent = isEnglish ? 'Saumon grillé' : 'Grilled Salmon';
-      mains[1].children[0].textContent = isEnglish ? 'Sandwich au homard' : 'Lobster Roll';
-      mains[2].children[0].textContent = isEnglish ? 'Paëlla aux fruits de mer' : 'Seafood Paella';
-
-      const drinks = document.getElementById('drinks').children;
-      drinks[0].children[0].textContent = isEnglish ? 'Eau pétillante' : 'Sparkling Water';
-      drinks[1].children[0].textContent = isEnglish ? 'Vin blanc' : 'White Wine';
-      drinks[2].children[0].textContent = isEnglish ? 'Thé glacé au citron' : 'Lemon Iced Tea';
     }
   </script>
 </body>
