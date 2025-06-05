@@ -33,13 +33,19 @@
     }
     .switches {
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
+    }
+    .switch-label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.9em;
     }
     label.switch {
       position: relative;
       display: inline-block;
-      width: 40px;
-      height: 22px;
+      width: 48px;
+      height: 24px;
     }
     label.switch input {
       opacity: 0;
@@ -56,29 +62,39 @@
       background-color: #ccc;
       transition: .4s;
       border-radius: 34px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 24px;
+      color: black;
     }
     .slider:before {
       position: absolute;
       content: "";
-      height: 16px;
-      width: 16px;
+      height: 18px;
+      width: 18px;
       left: 3px;
       bottom: 3px;
       background-color: white;
       transition: .4s;
       border-radius: 50%;
     }
+    .dark-mode-toggle input:checked + .slider::after {
+      content: 'D';
+    }
+    .dark-mode-toggle .slider::after {
+      content: 'L';
+    }
+    .lang-toggle input:checked + .slider::after {
+      content: 'FR';
+    }
+    .lang-toggle .slider::after {
+      content: 'EN';
+    }
     input:checked + .slider {
       background-color: #2196F3;
     }
     input:checked + .slider:before {
-      transform: translateX(18px);
-    }
-    .switch-label {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.9em;
+      transform: translateX(24px);
     }
     .menu-section {
       padding: 2rem;
@@ -122,13 +138,13 @@
   <header>
     <h1 id="title">KHALIL SEAFOOD</h1>
     <div class="switches">
-      <label class="switch-label">Dark Mode
+      <label class="switch-label dark-mode-toggle">
         <label class="switch">
           <input type="checkbox" onchange="toggleDarkMode()">
           <span class="slider"></span>
         </label>
       </label>
-      <label class="switch-label">FR / EN
+      <label class="switch-label lang-toggle">
         <label class="switch">
           <input type="checkbox" onchange="toggleLanguage()">
           <span class="slider"></span>
@@ -156,7 +172,7 @@
         'Shrimp Cocktail': 'Cocktail de crevettes',
         'Fried Calamari': 'Calmars frits',
         'Clam Chowder': 'Soupe de palourdes',
-        'Garlic Butter Mussels': 'Moules au beurre à l'ail',
+        'Garlic Butter Mussels': 'Moules au beurre à l\'ail',
         'Seafood Spring Rolls': 'Rouleaux de printemps aux fruits de mer',
         'Mini Crab Cakes': 'Mini galettes de crabe',
         'Spicy Tuna Tartare': 'Tartare de thon épicé',
@@ -183,7 +199,7 @@
         'Strawberry Smoothie': 'Smoothie à la fraise',
         'Watermelon Juice': 'Jus de pastèque',
         'Pineapple Crush': 'Ananas frappé',
-        'Fresh Orange Juice': 'Jus d'orange frais'
+        'Fresh Orange Juice': 'Jus d\'orange frais'
       };
 
       document.querySelectorAll('.item').forEach(el => {
